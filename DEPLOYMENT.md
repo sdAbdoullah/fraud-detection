@@ -34,8 +34,8 @@
 #### 1. Clone repository
 
 ```bash
-git clone https://github.com/yourusername/fraud-detection-ml-ai.git
-cd fraud-detection-ml-ai
+git clone https://github.com/sdAbdoullah/fraud-detection.git
+cd fraud-detection
 ```
 
 #### 2. Create virtual environment
@@ -277,7 +277,7 @@ GEMINI_API_KEY = "sk_xxxxx..."
 **Option A: Via Streamlit Cloud Dashboard**
 1. Go to https://share.streamlit.io/
 2. Click "New app"
-3. Select repository: `yourusername/fraud-detection-ml-ai`
+3. Select repository: `sdAbdoullah/fraud-detection`
 4. Branch: `main`
 5. File path: `app/app.py`
 6. Click "Deploy"
@@ -291,7 +291,7 @@ streamlit cloud deploy
 
 ```bash
 # App URL will be
-https://yourusername-fraud-detection-ml-ai.streamlit.app
+https://sdAbdoullah-fraud-detection.streamlit.app
 
 # Check logs
 streamlit logs
@@ -578,8 +578,8 @@ python -m memory_profiler app.py
 ## Support
 
 For issues, contact:
-- **GitHub Issues**: https://github.com/yourusername/fraud-detection-ml-ai/issues
-- **Email**: your.email@example.com
+- **GitHub Issues**: https://github.com/sdAbdoullah/fraud-detection/issues
+- **Email**: Abdellahilimam181@gmail.com
 - **Documentation**: See docs/ folder
 
 ---
