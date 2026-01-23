@@ -1,7 +1,5 @@
 # 🏦 Détection Proactive de Fraude Bancaire avec ML & IA Générative
 
-**Master FADS - Université Abdelmalek Essaâdi, Tétouan**
-
 > Système intelligent combinant **Machine Learning (XGBoost)** et **IA générative (Google Gemini)** pour détecter et expliquer les transactions frauduleuses en temps réel.
 
 ---
@@ -57,7 +55,7 @@ Développer un **système opérationnel de détection proactive de fraude** capa
 - **Synthèse globale** des risques détectés
 - **Recommandations intelligentes** basées sur le domaine
 
-### 📊 Application Streamlit v2
+### 📊 Application Streamlit
 | Onglet | Fonctionnalités |
 |--------|-----------------|
 | 📈 **Dashboard** | KPIs temps réel, distributions, alertes par ville |
@@ -329,71 +327,7 @@ Top 5 variables influentes (XGBoost) :
 
 **Note** : V1-V28 sont PCA (anonymisées). On ignore leur signification métier, mais elles discriminent très bien fraude vs légitime.
 
----
 
-## 📁 Structure du projet
-
-```
-fraud-detection-ml-ai/
-│
-├── 📄 README.md                        # Ce fichier
-├── 📄 .gitignore                       # Exclusions Git
-├── 📄 requirements.txt                 # Dépendances Python
-├── 📄 .env.example                     # Template variables d'env
-│
-├── 📂 notebooks/
-│   └── fraud_detection_final.ipynb     # ML pipeline (EDA, SMOTE, modèles)
-│
-├── 📂 app/
-│   ├── app.py                          # Application Streamlit principal
-│   ├── config.py                       # Configuration centralisée
-│   ├── utils.py                        # Fonctions utilitaires
-│   └── components/
-│       ├── dashboard.py                # Onglet dashboard
-│       ├── alerts.py                   # Onglet alertes temps réel
-│       ├── analysis.py                 # Onglet analyse détaillée
-│       ├── gemini_integration.py       # Intégration Gemini
-│       ├── scenarios.py                # Onglet scénarios synthétiques
-│       └── exports.py                  # Onglet exports Excel
-│
-├── 📂 models/
-│   ├── xgboost_model.pkl              # Modèle entraîné (généré)
-│   ├── standard_scaler.pkl            # Scaler (généré)
-│   └── model_info.json                # Métadonnées modèle
-│
-├── 📂 data/
-│   ├── creditcard.csv                 # Dataset complet (non inclus)
-│   ├── sample_transactions.csv        # Données d'exemple (generated)
-│   └── test_data.csv                  # Test set (generated)
-│
-├── 📂 visualizations/
-│   ├── 01_class_distribution.html    # Distribution classes
-│   ├── 02_amount_distribution.html   # Montants
-│   ├── 03_correlation_matrix.html    # Corrélations
-│   ├── 04_class_correlation.html     # Fraude vs autres vars
-│   ├── 05_smote_effect.html          # Avant/après SMOTE
-│   ├── 06_models_comparison.html     # Comparaison modèles
-│   ├── 07_roc_auc_curves.html        # Courbes ROC
-│   ├── 08_confusion_matrices.html    # Matrices confusion
-│   └── 09_feature_importance.html    # Feature importance
-│
-├── 📂 results/
-│   ├── alerts_report_20250123.csv    # Alertes exportées (generated)
-│   ├── scenarios_gemini_20250123.csv # Scénarios (generated)
-│   └── model_metrics.json            # Métriques finales (generated)
-│
-├── 📂 docs/
-│   ├── ARCHITECTURE.md               # Détails techniques
-│   ├── METHODOLOGY.md                # CRISP-DM détaillé
-│   ├── API_GEMINI.md                 # Intégration Gemini
-│   └── DEPLOYMENT.md                 # Guide déploiement
-│
-└── 📂 .github/
-    └── workflows/
-        └── ci.yml                     # CI/CD pipeline (GitHub Actions)
-```
-
----
 
 ## 🔬 Méthodologie
 
@@ -438,39 +372,12 @@ fraud-detection-ml-ai/
 
 ## 🤝 Contributeurs
 
-- **Auteur** : [Votre Nom]
+- **Auteur** : Abdellahi Cheikh
 - **Formation** : Master FADS, FSJES Tétouan
-- **Contact** : votre.email@example.com
+- **Contact** : Abdellahilimam181@gmail.com
 
----
-
-## 📝 Points clés à retenir
-
-### ✅ Strengths du projet
-1. **Méthodologie rigoureuse** - CRISP-DM standard industrie
-2. **Gestion déséquilibre** - SMOTE + class weights justifiés
-3. **Multi-modèles** - Comparaison scientifique (RF vs XGB vs LGBM)
-4. **Métriques appropriées** - ROC-AUC, Rappel vs Accuracy trompeuse
-5. **IA générative** - Explainability via Gemini (innovation Master FADS)
-6. **Application déployable** - Streamlit ready-for-production
-7. **Robustesse** - Gestion erreurs, fallbacks, exports
-
-### ⚠️ Limitations & améliorations futures
-- **V1** : Données statiques (batch)
-- **V2** : Streaming temps réel + retraining continu
-- **SHAP values** : Pour explainability data scientists
-- **Federated learning** : Privacy-preserving pour banques distribuées
-- **A/B testing** : Mesurer impact réel en production
-
----
 
 ## 📖 Ressources
-
-### Documentation du projet
-- [ARCHITECTURE.md](./docs/ARCHITECTURE.md) - Détails techniques
-- [METHODOLOGY.md](./docs/METHODOLOGY.md) - CRISP-DM détaillé
-- [API_GEMINI.md](./docs/API_GEMINI.md) - Intégration IA générative
-- [DEPLOYMENT.md](./docs/DEPLOYMENT.md) - Production checklist
 
 ### Références externes
 - [XGBoost Documentation](https://xgboost.readthedocs.io/)
@@ -495,47 +402,6 @@ Ce projet est licencié sous la **MIT License** - voir [LICENSE](./LICENSE) pour
 
 ---
 
-## 🎓 Présentation au professeur
-
-### Structure de présentation (10 minutes)
-
-1. **Vue d'ensemble** (1-2 min)
-   - Problème : fraude bancaire (billions USD/an)
-   - Solution : ML + IA générative
-   - Impact : Détection 84%, Recommandations actionnables
-
-2. **Défi & données** (2-3 min)
-   - Déséquilibre 99.83% vs 0.17%
-   - SMOTE : Synthétisation fraudes
-   - Sauvegardes : Combiner avec class_weight
-
-3. **Modèles** (3-5 min)
-   - Comparaison 3 algos (RF vs XGB vs LGBM)
-   - Résultats : XGB meilleur (ROC 0.9725, Rappel 84%)
-   - Justification : Compromis approprié coûts
-
-4. **App & IA** (5-7 min)
-   - Streamlit : 6 onglets opérationnels
-   - Gemini : Explications + recommandations
-   - Démonstration live (si possible)
-
-5. **Conclusion** (9-10 min)
-   - Solution complète, déployable, explicable
-   - Innovation : Combinaison ML + IA générative
-   - ROI positif même avec 70% faux positifs
-
-### Questions probables
-
-**Q: "Pourquoi SMOTE et pas juste class_weight ?"**
-R: Class_weight pénalise errors. SMOTE crée vraies observations synthétiques. Combinaison = meilleur apprentissage.
-
-**Q: "Comment XGBoost n'overfit pas ?"**
-R: Validation croisée stratifiée 5-fold, test set séparé, ROC-AUC cohérent train/test, hyperparamètres régularisés.
-
-**Q: "Pourquoi Gemini vs SHAP ?"**
-R: SHAP = explainability technique. Gemini = explication opérationnelle pour analystes. Complémentaires.
-
----
 
 ## 🚀 Quick Start
 
@@ -558,17 +424,3 @@ streamlit run app/app.py
 # Ouvrir http://localhost:8501 dans le navigateur
 ```
 
----
-
-## ❓ Support & Questions
-
-Pour questions ou problèmes :
-1. Vérifier les [docs/](./docs/) détaillées
-2. Ouvrir une issue sur GitHub
-3. Contacter : votre.email@example.com
-
----
-
-**Made with ❤️ for Master FADS**
-
-*Dernière mise à jour : Janvier 2026*
