@@ -2,23 +2,6 @@
 
 > Système intelligent combinant **Machine Learning (XGBoost)** et **IA générative (Google Gemini)** pour détecter et expliquer les transactions frauduleuses en temps réel.
 
----
-
-## 📋 Table des matières
-
-- [Aperçu du projet](#aperçu-du-projet)
-- [Caractéristiques principales](#caractéristiques-principales)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Utilisation](#utilisation)
-- [Résultats](#résultats)
-- [Structure du projet](#structure-du-projet)
-- [Méthodologie](#méthodologie)
-- [Contributeurs](#contributeurs)
-- [Licence](#licence)
-
----
 
 ## 🎯 Aperçu du projet
 
