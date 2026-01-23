@@ -128,8 +128,8 @@ CSV → Preprocessing → SMOTE → Entraînement → Sauvegarde
 
 #### 1. Cloner le repository
 ```bash
-git clone https://github.com/yourusername/fraud-detection-ml-ai.git
-cd fraud-detection-ml-ai
+git clone https://github.com/yourusername/fraud-detection.git
+cd fraud-detection
 ```
 
 #### 2. Créer un environnement virtuel
